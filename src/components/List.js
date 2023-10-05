@@ -15,7 +15,7 @@ export default function List() {
     <div className="py-10 flex flex-col items-center justify-center">
       <ul className="list-disc">
         {animals.map((animal, index) => (
-          <ListItems key={index} name={animal.name} head={animal.head}/>
+          <ListItems key={index}head={animal.head} name={animal.name} />
         ))}
       </ul>
     </div>
