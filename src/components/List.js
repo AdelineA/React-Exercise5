@@ -1,0 +1,23 @@
+import React from "react";
+import ListItems from "./ListItems";
+
+const animals = [
+  { head: "🐕", name: "dog" },
+  { head: "🐈", name: "cat" },
+  { head: "🐤", name: "chicken" },
+  { head: "🐄", name: "cow" },
+  { head: "🐑", name: "sheep" },
+  { head: "🐎", name: "horse" },
+];
+
+export default function List() {
+  return (
+    <div className="py-10 flex flex-col items-center justify-center">
+      <ul className="list-disc">
+        {animals.map((animal, index) => (
+          <ListItems key={index}head={animal.head} name={animal.name} />
+        ))}
+      </ul>
+    </div>
+  );
+}
